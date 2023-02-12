@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste de Pokémon</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="$pokemonList | async as $pokemon">
+    <ion-item
+      [routerLink]="['single', i + 1]"
+      *ngFor="let pokemon of $pokemon.results; index as i"
+    >
+      {{ pokemon.name | titlecase }}
+    </ion-item>
+  </ion-list>
+</ion-content>

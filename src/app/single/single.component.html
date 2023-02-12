@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Page d'un Pokémon</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="$pokemon | async as pokemon">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ pokemon.forms[0].name | titlecase }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
